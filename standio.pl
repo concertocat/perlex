@@ -3,12 +3,11 @@
 
 use strict;
 
-my $res = '';
-$res = <STDIN>;
-
-while (!$res eq "quit") {
-	print $res;
+while (<STDIN>) {
+	chomp $_;
+	last if ($_ eq "quit");
+	print $_."\n";
 } 	
 
-exit;
+print "this is the end!\n";
 
